@@ -1,0 +1,31 @@
+.font-bold
+{
+   font-weight: bolder;
+   font-size: 35px;
+}
+
+body
+{
+    padding: 100px;
+}
+
+.number
+{
+    width: 90px;
+    height: 40px;
+    font-weight: bolder;
+    font-size: 35px;
+}
+
+.diskriminant
+{
+    margin-top: 20px;
+    margin-left: 90px;
+}
+
+#plot
+{
+    margin-top: 30px;
+    width: 400px;
+    height: 400px;
+}
