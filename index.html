@@ -1,0 +1,34 @@
+<html>
+    <head>
+    <head>
+        <meta charset="UTF-8">
+        <title>Квадратные уравнения</title>
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body class="font-bold">
+        <div id="app">
+            <div >x<sup>2</sup> + <input v-model="b" type="number" class="number b"> x+ <input v-model="c" type="number" class="number c"> = 0</div>
+            <div class="diskriminant">D = {{ D }}</div>
+            <div class="result">
+              <template v-if="D > 0">
+                    <div class="diskriminant">x1 = {{ (-b+Math.sqrt(D))/2 }}</div>
+                    <div class="diskriminant">x2 = {{ (-b-Math.sqrt(D))/2 }}</div>
+                </template>
+                <template v-if="D < 0">
+                        <div class="diskriminant">Нет решений!</div>
+                </template>
+                </template>
+                <template v-if="D == 0">
+                        <div class="diskriminant">x = {{ -b/2 }}</div>
+                </template>
+            </div>
+            <button v-on:click="graph">Построить!</button>
+            <div id="plot"></div>   
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+        <script src="https://unpkg.com/d3@3/d3.min.js"></script>
+        <script src="https://unpkg.com/function-plot@1/dist/function-plot.js"></script>
+        <script src="script.js"></script>
+
+    </body>
+</html>
